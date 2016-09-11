@@ -1,2 +1,2 @@
-# shellbot
-shell bot which won the shell hackathon
+# Revel-SeatJoy
+Convenience in your carseat
