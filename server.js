@@ -66,7 +66,7 @@ server.post('/submit/order', (req, res) => {
 })
 
 
-server.listen(3000, () => {
+server.listen(process.env.PORT || 3000, () => {
   console.log('Listening on Port: 3000');
 })
 
