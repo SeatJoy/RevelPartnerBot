@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1, minimum-scale=1, user-scalable = no">
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+	<title>SeatJoy Shell Bot</title>
+
+	<meta name="description" content="SeatJoy Demo" />
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@azumbrunnen_">
+
+	<meta name="twitter:creator" content="@azumbrunnen_">
+	<meta name="twitter:title" content="SeatJoy – UX / UI / WEB DESIGN">
+	<meta name="twitter:description" content="Hi. I'm SeatJoy BOT.">
+	<meta name="twitter:image" content="https://azumbrunnen.me/wp-content/themes/azumbrunnen/img/logo-social.png">
+
+	<!-- Open Graph data -->
+	<meta property="og:title" content="Blog – SeatJoy" />
+	<meta property="og:url" content="https://seatjoy.io/ " />
+	<meta property="og:description" content="Hi. I'm SeatJoy. " />
+	<meta property="og:site_name" content="SeatJoy's Blog" />
+	<meta property="og:image" content="https://azumbrunnen.me/wp-content/themes/azumbrunnen/img/logo-social.png"/>
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.azumbrunnen.me/blog/feed/rss2" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="http://www.azumbrunnen.me/blog/feed/rss" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.azumbrunnen.me/blog/feed/atom" />
+
+	<link rel="stylesheet" href="css/style.min.css">
+
+	<script type="text/javascript" src="https://azumbrunnen.me/wp-content/themes/azumbrunnen/chat/dist/chat.js"></script>
+	<script type="text/javascript" src="//use.typekit.net/uhk0ran.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<!--[if lt IE 9]>
+		<script src="https://azumbrunnen.me/wp-content/themes/azumbrunnen/app/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="page">
+		<div class="intro">
+			<hr class="top-bar"/>
+			<section class="align chat">
+				<div class="chat__overflow">
+					<div class="chat__intro cui">
+						<div class="chat__intro__logo">
+							<img src="shell.png" alt="shell" />
+						</div>
+						<div class="chat__intro__desc">
+							Welcome to Shell Gas Station<br>
+							<em></em>
+						</div>
+						<!-- <div class="chat__intro__scroll">
+							Scroll, if you don't feel like talking ⇣
+						</div> -->
+					</div>
+				</div>
+			</section>
+		
+
+		</div><!-- end intro !--><!--
+	 --><div class="single"></div>
+	</div><!-- end page -->
+
+<!--[if gt IE 9]><!-->
+  <!-- <script src="https://azumbrunnen.me/wp-content/themes/azumbrunnen/app_dev/vendor/requirejs/require.js" data-main="https://azumbrunnen.me/wp-content/themes/azumbrunnen/app_dev/main.js"></script> -->
+  <!-- <script src="https://azumbrunnen.me/wp-content/themes/azumbrunnen/app_public/azumbrunnen.js"></script> -->
+  <script src="chat-ai.js"></script>
+	<script>var conversationBlock = {'chat_next': ['You\'re caught up for now! 🙌🤗👍 Make sure you come back later!', '<img src="https://media1.giphy.com/media/vtVpHbnPi9TLa/200.gif"/></span>', 'Got a link you\'d like to share or something on your mind? Let me know! :)', { type: 'choose', answers: [{ 'text': 'No I\'m good, thanks!', 'path': 'byebye' },{ 'text': 'Yes! 🙇', 'path': 'suggestLink' }]}],'byebye': ['Great! It was fun talking to you! Have a great day! 🙌'],'byebye-suggestion': ['Thanks for this! Really looking forward to discussing your suggestion! ☕️ Have a great day! 🙌'],'suggestLink': ['Great! Looking forward to hearing your thought! Include your twitter handle so I can ping you back!', {type: 'write', path: 'byebye-suggestion', name: 'message'}],'chat_more1331':['Long press to send a photo is a questionable interaction, especially when sending to multiple contacts. But that\'s not the key takeaway here!',
+'What\'s remarkable here is the fact that he built a native prototype. This gave him new insights how well something works in a real life context.',
+{type: 'choose', answers: [{'text': 'Cool. 🤓 What else?', 'path': 'chat_post1328'}]},],'greeting':['Hey! Welcome back. 🤗', 'Damjan Stankovic has an interesting line of thought on how to approach the redesign of a camera app.',
+'He walks you through the different stages of his idea to final prototype. It\'s fun! It feels like you\'re part of the process:',
+'<a class="card" target="_blank" href=https://blog.prototypr.io/facebook-camera-2f7e962d6b6b#.9bh786dwh"><img src="https://cdn-images-1.medium.com/max/2000/1*LZSfSmJkQXmJ9w73Bh4csw.jpeg"/>Facebook Camera – iOS App Concept and Prototype</a>',
+{type: 'choose', answers: [{'text': 'Thoughts? 🤔', 'path': 'chat_more1331'},{'text': 'Nah 😑', 'path': 'chat_post1328','post_id':1331,}]}
+],'chat_more1328':['Chris makes a good point. Most chat experiences out there stick to a traditional SMS format, whereas we could do so much more with it.',
+'Just like embeds on the web, we could think about richer and more engaging content within our conversations. So yes, the bubble is only the beginning.',
+{type: 'choose', answers: [{'text': 'Anything else I might have missed?', 'path': 'chat_post1326'}]},],'chat_post1328':['Are conversational interfaces the future of UI design and where are they gonna take us?',
+'Chris Messina argues that the chat bubble is only the beginning, not the end. Here is a great read about it:',
+'<a class="card" target="_blank" href="https://medium.com/chris-messina/sorry-to-burst-your-chat-bubble-ae4dc6952447"><img src="http://azumbrunnen.me/wp-content/uploads/medium-logo-1024x285.png"/>Sorry to burst your [chat] bubble</a>',
+{type: 'choose', answers: [{'text': 'Thoughts?', 'path': 'chat_more1328'},{'text': 'Cool. What else?', 'path': 'chat_post1326','post_id':1328,}]}],'chat_more1326':['I had the same exact experience. In fact, I attend every single user study, because you simply miss too much information if you don\'t.',
+'Watching users struggle with your design is painful. That\'s  why you need to see it. 😬',
+{type: 'choose', answers: [{'text': 'Ouch!  😑  What else?', 'path': 'chat_next'}]},],'chat_post1326':['When it comes to UX research, we often wonder about the ideal number of participants needed to get reliable results.',
+'It turns out, that might be wrong. The number of hours exposed to users interacting with your design is much more valuable according to Jared Spool.',
+'<a class="card" target="_blank" href="https://medium.com/@jmspool/fast-path-to-a-great-ux-increased-exposure-hours-afde796f2e43#.nhkmsiuc4"><img src="http://azumbrunnen.me/wp-content/uploads/exposure.jpg"/>Fast Path to a Great UX — Increased Exposure Hours</a>',
+{type: 'choose', answers: [{'text': 'What\'s your experience?', 'path': 'chat_more1326'},{'text': 'Anything else?', 'path': 'chat_next','post_id':1326,}]}],}</script><!--<![endif]-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42460075-1', 'azumbrunnen.me');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
