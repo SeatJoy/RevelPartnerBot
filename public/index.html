@@ -1,6 +1,7 @@
-
 <!DOCTYPE html>
 <html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1, minimum-scale=1, user-scalable = no">
@@ -8,99 +9,909 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-	<title>SeatJoy Shell Bot</title>
+	<title>Daily UX conversations with your friendly UX Bear - UX Chat</title>
+  <meta name="description" content="Your friend, UX Bear helps you discover great UX reads so you can focus on stuff that matters." />
 
-	<meta name="description" content="SeatJoy Demo" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@uxdsgn">
+  <meta name="twitter:creator" content="@azumbrunnen_">
+  <meta name="twitter:title" content="Daily UX conversations with your friendly UX Bear - UX Chat">
+  <meta name="twitter:description" content="Your friend, UX Bear helps you discover great UX reads so you can focus on stuff that matters.">
+  
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Daily UX conversations with your friendly UX Bear - UX Chat" />
+  <meta property="og:url" content="http://uxchat.me/ " />
+  <meta property="og:description" content="Your friend, UX Bear helps you discover great UX reads so you can focus on stuff that matters." />
+  <meta property="og:site_name" content="UX Chat Me – Daily UX conversations with your friendly UX Bear" />
+  
+  <!-- Favicon wizardry of oz -->
+  <!-- <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.html">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.html">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.html">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.html">
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.html">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.html">
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.html">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.html">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.html">
+  <link rel="icon" type="image/png" href="favicon-192x192.html" sizes="192x192">
+  <link rel="icon" type="image/png" href="favicon-160x160.html" sizes="160x160">
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+-->
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="mstile-144x144.html">
+  <meta name="msapplication-config" content="browserconfig.xml"> 
 
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@azumbrunnen_">
 
-	<meta name="twitter:creator" content="@azumbrunnen_">
-	<meta name="twitter:title" content="SeatJoy – UX / UI / WEB DESIGN">
-	<meta name="twitter:description" content="Hi. I'm SeatJoy BOT.">
-	<meta name="twitter:image" content="https://azumbrunnen.me/wp-content/themes/azumbrunnen/img/logo-social.png">
 
-	<!-- Open Graph data -->
-	<meta property="og:title" content="Blog – SeatJoy" />
-	<meta property="og:url" content="https://seatjoy.io/ " />
-	<meta property="og:description" content="Hi. I'm SeatJoy. " />
-	<meta property="og:site_name" content="SeatJoy's Blog" />
-	<meta property="og:image" content="https://azumbrunnen.me/wp-content/themes/azumbrunnen/img/logo-social.png"/>
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
+	<link rel="stylesheet" href="dist/chat.css">
+  <link rel="stylesheet" href="dist/style.css">
 
-	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.azumbrunnen.me/blog/feed/rss2" />
-	<link rel="alternate" type="text/xml" title="RSS .92" href="http://www.azumbrunnen.me/blog/feed/rss" />
-	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.azumbrunnen.me/blog/feed/atom" />
-
-	<link rel="stylesheet" href="css/style.min.css">
-
-	<script type="text/javascript" src="https://azumbrunnen.me/wp-content/themes/azumbrunnen/chat/dist/chat.js"></script>
-	<script type="text/javascript" src="//use.typekit.net/uhk0ran.js"></script>
+	<script type="text/javascript" src="http://use.typekit.net/uhk0ran.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	<!--[if lt IE 9]>
-		<script src="https://azumbrunnen.me/wp-content/themes/azumbrunnen/app/html5shiv.js"></script>
-	<![endif]-->
+
+
+  <!-- glad you discovered this 🤗. say hi @uxdesgn -->
+  <style media="screen">
+    .hi-there.how-are-you {
+      content: 'good thanks 😅';
+    }
+  </style>
+
 </head>
 <body>
-	<div class="page">
-		<div class="intro">
-			<hr class="top-bar"/>
-			<section class="align chat">
-				<div class="chat__overflow">
-					<div class="chat__intro cui">
-						<div class="chat__intro__logo">
-							<img src="shell.png" alt="shell" />
-						</div>
-						<div class="chat__intro__desc">
-							Welcome to Shell Gas Station<br>
-							<em></em>
-						</div>
-						<!-- <div class="chat__intro__scroll">
-							Scroll, if you don't feel like talking ⇣
-						</div> -->
-					</div>
-				</div>
-			</section>
-		
-
-		</div><!-- end intro !--><!--
-	 --><div class="single"></div>
-	</div><!-- end page -->
-
-<!--[if gt IE 9]><!-->
-  <!-- <script src="https://azumbrunnen.me/wp-content/themes/azumbrunnen/app_dev/vendor/requirejs/require.js" data-main="https://azumbrunnen.me/wp-content/themes/azumbrunnen/app_dev/main.js"></script> -->
-  <!-- <script src="https://azumbrunnen.me/wp-content/themes/azumbrunnen/app_public/azumbrunnen.js"></script> -->
-  <script src="chat-ai.js"></script>
-	<script>var conversationBlock = {'chat_next': ['You\'re caught up for now! 🙌🤗👍 Make sure you come back later!', '<img src="https://media1.giphy.com/media/vtVpHbnPi9TLa/200.gif"/></span>', 'Got a link you\'d like to share or something on your mind? Let me know! :)', { type: 'choose', answers: [{ 'text': 'No I\'m good, thanks!', 'path': 'byebye' },{ 'text': 'Yes! 🙇', 'path': 'suggestLink' }]}],'byebye': ['Great! It was fun talking to you! Have a great day! 🙌'],'byebye-suggestion': ['Thanks for this! Really looking forward to discussing your suggestion! ☕️ Have a great day! 🙌'],'suggestLink': ['Great! Looking forward to hearing your thought! Include your twitter handle so I can ping you back!', {type: 'write', path: 'byebye-suggestion', name: 'message'}],'chat_more1331':['Long press to send a photo is a questionable interaction, especially when sending to multiple contacts. But that\'s not the key takeaway here!',
-'What\'s remarkable here is the fact that he built a native prototype. This gave him new insights how well something works in a real life context.',
-{type: 'choose', answers: [{'text': 'Cool. 🤓 What else?', 'path': 'chat_post1328'}]},],'greeting':['Hey! Welcome back. 🤗', 'Damjan Stankovic has an interesting line of thought on how to approach the redesign of a camera app.',
-'He walks you through the different stages of his idea to final prototype. It\'s fun! It feels like you\'re part of the process:',
-'<a class="card" target="_blank" href=https://blog.prototypr.io/facebook-camera-2f7e962d6b6b#.9bh786dwh"><img src="https://cdn-images-1.medium.com/max/2000/1*LZSfSmJkQXmJ9w73Bh4csw.jpeg"/>Facebook Camera – iOS App Concept and Prototype</a>',
-{type: 'choose', answers: [{'text': 'Thoughts? 🤔', 'path': 'chat_more1331'},{'text': 'Nah 😑', 'path': 'chat_post1328','post_id':1331,}]}
-],'chat_more1328':['Chris makes a good point. Most chat experiences out there stick to a traditional SMS format, whereas we could do so much more with it.',
-'Just like embeds on the web, we could think about richer and more engaging content within our conversations. So yes, the bubble is only the beginning.',
-{type: 'choose', answers: [{'text': 'Anything else I might have missed?', 'path': 'chat_post1326'}]},],'chat_post1328':['Are conversational interfaces the future of UI design and where are they gonna take us?',
-'Chris Messina argues that the chat bubble is only the beginning, not the end. Here is a great read about it:',
-'<a class="card" target="_blank" href="https://medium.com/chris-messina/sorry-to-burst-your-chat-bubble-ae4dc6952447"><img src="http://azumbrunnen.me/wp-content/uploads/medium-logo-1024x285.png"/>Sorry to burst your [chat] bubble</a>',
-{type: 'choose', answers: [{'text': 'Thoughts?', 'path': 'chat_more1328'},{'text': 'Cool. What else?', 'path': 'chat_post1326','post_id':1328,}]}],'chat_more1326':['I had the same exact experience. In fact, I attend every single user study, because you simply miss too much information if you don\'t.',
-'Watching users struggle with your design is painful. That\'s  why you need to see it. 😬',
-{type: 'choose', answers: [{'text': 'Ouch!  😑  What else?', 'path': 'chat_next'}]},],'chat_post1326':['When it comes to UX research, we often wonder about the ideal number of participants needed to get reliable results.',
-'It turns out, that might be wrong. The number of hours exposed to users interacting with your design is much more valuable according to Jared Spool.',
-'<a class="card" target="_blank" href="https://medium.com/@jmspool/fast-path-to-a-great-ux-increased-exposure-hours-afde796f2e43#.nhkmsiuc4"><img src="http://azumbrunnen.me/wp-content/uploads/exposure.jpg"/>Fast Path to a Great UX — Increased Exposure Hours</a>',
-{type: 'choose', answers: [{'text': 'What\'s your experience?', 'path': 'chat_more1326'},{'text': 'Anything else?', 'path': 'chat_next','post_id':1326,}]}],}</script><!--<![endif]-->
-
+<!-- fishometer -->
+<div class="fishometer">
+ <!--  <span class="fishometer__icon">🐟</span>
+  <span class="fishometer__count">0</span> -->
+</div>
+<!-- bubbely booo -->
+<div class="uxchat"></div>
+<!-- fishes ftw -->
+<div class="effects"><img></div>
+<!-- we only need jQuery for ajaxing -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- 🤗 -->
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    var c = [
+        // {
+        //     "path": "332",
+        //     "messages": [{
+        //         "text": "Welcome back!",
+        //         "author": "uxbear"
+        //     }, {
+        //         "author": "uxbear",
+        //         "text": "What do the arctic and a lot of good website designs have in common? \ud83e\udd14"
+        //     }],
+        //     "choices": [{
+        //         "path": "332/bears",
+        //         "text": "Bears?! \ud83d\udc3b",
+        //         "write": false
+        //     }, {
+        //         "path": "330",
+        //         "text": "Erm, what else?",
+        //         "write": false
+        //     }]
+        // }, 
 
-  ga('create', 'UA-42460075-1', 'azumbrunnen.me');
-  ga('send', 'pageview');
-
+    {
+        "path": "332/bears",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Hi Will, Good to have you back!!"
+        }, {
+            "author": "uxbear",
+            "text": "How can I help you?!"
+        }],
+        "choices": [{
+            "path": "332/bears/yeah",
+            "text": "Run Business Reports",
+            "write": false
+        },
+        {
+            "path": "332/ads",
+            "text": "Manage facebook ads",
+            "write": false
+        },{
+            "path": "332/ads/fb",
+            "text": "Broadcast message",
+            "write": false
+        }, {
+            "path": "330",
+            "text": "Adjust Daily settings",
+            "write": false
+        }]
+    },{
+        "path": "332/menu",
+        "messages": [{
+            "author": "uxbear",
+            "text": "How can I help you?!"
+        }],
+        "choices": [{
+            "path": "332/bears/yeah",
+            "text": "Run Business Reports",
+            "write": false
+        },
+        {
+            "path": "332/ads",
+            "text": "Manage facebook ads",
+            "write": false
+        },{
+            "path": "332/ads/fb",
+            "text": "Broadcast message",
+            "write": false
+        }, {
+            "path": "330",
+            "text": "Adjust Daily settings",
+            "write": false
+        }]
+    }, {
+        "path": "332/bears/yeah",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Sure, Here you go!. Reports from Yesterday:"
+        },{
+            "author": "uxbear",
+            "type": "link",
+            "href": "https://medium.com/@chalaska/white-space-in-design-1788fa040757#.e2uvoymhq",
+            "src": "matrix.png",
+            "title": "Top 10 Quantity Sold"
+        },{
+            "author": "uxbear",
+            "type": "link",
+            "href": "https://medium.com/@chalaska/white-space-in-design-1788fa040757#.e2uvoymhq",
+            "src": "profit_by_product.png",
+            "title": "Top 10 Profit by product"
+        },{
+            "author": "uxbear",
+            "type": "link",
+            "href": "https://medium.com/@chalaska/white-space-in-design-1788fa040757#.e2uvoymhq",
+            "src": "sales-summary.png",
+            "title": "sales-summary last day"
+        }],
+        "choices": [{
+            "path": "330/reports",
+            "text": "Past Reports",
+            "write": false
+        },
+        {
+            "path": "330/slow",
+            "text": "Slow moving inventory",
+            "write": false
+        },
+        {
+            "path": "330/hot",
+            "text": "Hot Products 🔥",
+            "write": false
+        }]
+    },  {
+            "path": "330/reports",
+            "messages": [{
+                "text": "Sure! How far would you like me to go:",
+                "author": "uxbear"
+            }],
+            "choices": [{
+                "path": "330",
+                "text": "yesterday",
+                "write": false
+            },{
+                "path": "330",
+                "text": "1 week",
+                "write": false
+            }, {
+                "path": "330",
+                "text": "1 month",
+                "write": false
+            }]
+        },{
+            "path": "330/slow",
+            "messages": [{
+                "text": "Wait, let me fetch!",
+                "author": "uxbear"
+            },{
+                "text": "Here you go!",
+                "author": "uxbear"
+            },{
+                "text": "1.Sweet corn soup 2.Tomato soup 3.Grape Juice",
+                "author": "uxbear"
+            }, {
+                "text": "Would you like to run a quick promotion:",
+                "author": "uxbear"
+            }],
+            "choices": [{
+            "path": "332/ads",
+            "text": "Run Promotion",
+            "write": false
+        },
+        {
+            "path": "330/obeys",
+            "text": "No",
+            "write": false
+        }]
+        },{
+            "path": "330/hot",
+            "messages": [{
+                "text": "Wait, let me fetch!",
+                "author": "uxbear"
+            },{
+                "text": "Here you go!",
+                "author": "uxbear"
+            },, {
+                "text": "Fettucini Alfredo 🔥🔥🔥",
+                "author": "uxbear"
+            },{
+                "text": "Bruschetta 🔥🔥",
+                "author": "uxbear"
+            },{
+                "text": "Salmon Pasta 🔥",
+                "author": "uxbear"
+            }],
+            "choices": [{
+            "path": "332/menu",
+            "text": "Go Back",
+            "write": false
+        }]
+        },
+        {
+            "path": "330",
+            "messages": [{
+                "text": "Here you go Will:",
+                "author": "uxbear"
+            },{
+            "author": "uxbear",
+            "type": "link",
+            "href": "https://medium.com/@chalaska/white-space-in-design-1788fa040757#.e2uvoymhq",
+            "src": "sales-summary.png",
+            "title": "sales-summary"
+        },{
+            "author": "uxbear",
+            "text": "How can I help you?"
+        }],
+            "choices": [{
+            "path": "332/bears/yeah",
+            "text": "Run Business Reports",
+            "write": false
+        },
+        {
+            "path": "332/ads",
+            "text": "Manage facebook ads",
+            "write": false
+        },{
+            "path": "332/ads/fb",
+            "text": "Broadcast message",
+            "write": false
+        }, {
+            "path": "330",
+            "text": "Adjust Daily settings",
+            "write": false
+        }]
+    },{
+            "path": "330/obeys",
+            "messages": [{
+                "text": "Ron Obeys!!",
+                "author": "uxbear"
+            },{
+            "author": "uxbear",
+            "text": "You can put me to work by indulging me in any of theses tasks:"
+        }],
+            "choices": [{
+            "path": "332/bears/yeah",
+            "text": "Run Business Reports",
+            "write": false
+        },
+        {
+            "path": "332/ads",
+            "text": "Manage facebook ads",
+            "write": false
+        },{
+            "path": "332/ads/fb",
+            "text": "Broadcast message",
+            "write": false
+        }, {
+            "path": "330",
+            "text": "Adjust Daily settings",
+            "write": false
+        }]
+    },{
+            "path": "332/ads",
+            "messages": [{
+            "author": "uxbear",
+            "type": "link",
+            "href": "",
+            "src": "confetti.gif",
+            "title": ""
+        },{
+                "text": "Heres what I can do for you:",
+                "author": "uxbear"
+            }],
+            "choices": [{
+            "path": "332/ads/fb",
+            "text": "Run facebook, instagram Ads",
+            "write": false
+        },
+        {
+            "path": "332/ads/email",
+            "text": "Run email marketing campaign",
+            "write": false
+        }]
+    },
+    {
+            "path": "332/ads/fb",
+            "messages": [{
+                "text": "Sweet. How much budget are planning to invest:",
+                "author": "uxbear"
+            }],
+            "choices": [{
+            "path": "332/ads/fb/ad",
+            "text": "$10",
+            "write": false
+        },{
+            "path": "332/ads/fb/ad",
+            "text": "$20",
+            "write": false
+        },{
+            "path": "332/ads/fb/ad",
+            "text": "$30",
+            "write": false
+        },{
+            "path": "332/ads/fb/ad",
+            "text": "$40",
+            "write": false
+        }]
+    },
+    {
+            "path": "332/ads/fb/ad",
+            "messages": [{
+                "text": "Cool. Share text for the ad post(max 25 chars)",
+                "author": "uxbear"
+            }],
+            "choices": [{
+            "path": "332/ads/fb/preview",
+            "text": "Add ad text",
+            "write": true
+        }]
+    },{
+            "path": "332/ads/email",
+            "messages": [{
+                "text": "Cool. Share text for the ad (max 25 chars)",
+                "author": "uxbear"
+            }],
+            "choices": [{
+            "path": "332/ads/email/preview",
+            "text": "Share ad text",
+            "write": true
+        }]
+    },{
+            "path": "332/ads/fb/preview",
+            "messages": [{
+                "text": "Heres your ad. Please confirm to post:",
+                "author": "uxbear"
+            },{
+            "author": "uxbear",
+            "type": "link",
+            "href": "https://medium.com/@chalaska/white-space-in-design-1788fa040757#.e2uvoymhq",
+            "src": "facebook-advertising.png",
+            "title": "Sample Ad"
+        }],
+            "choices": [{
+            "path": "332/menu",
+            "text": "Confirm",
+            "write": false
+        },{
+            "path": "332/menu",
+            "text": "back",
+            "write": false
+        }]
+    },{
+            "path": "332/ads/email/preview",
+            "messages": [{
+                "text": "Heres your ad. Please confirm to send you custom audience:",
+                "author": "uxbear"
+            },{
+            "author": "uxbear",
+            "type": "link",
+            "href": "https://medium.com/@chalaska/white-space-in-design-1788fa040757#.e2uvoymhq",
+            "src": "email_ad_preview.jpg",
+            "title": "Sample Ad"
+        }],
+            "choices": [{
+            "path": "332/menu",
+            "text": "Confirm",
+            "write": false
+        },{
+            "path": "332/menu",
+            "text": "back",
+            "write": false
+        }]
+    },
+        {
+        "path": "331",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Imagine it\u2019s 7 am\u2026"
+        }, {
+            "author": "uxbear",
+            "text": "Your mobile screen lightens up, shows your schedule and news you\u2019ve missed while you were asleep..."
+        }, {
+            "author": "uxbear",
+            "text": "Meanwhile, your mobile triggers your coffee machine, turns on the radiator and sets your TV to the correct channel."
+        }, {
+            "author": "uxbear",
+            "text": "While sipping your cappuccino, Google Maps shows you a perfectly timed notification that you should leave now in order to be on time for your next meeting\u2026"
+        }, {
+            "author": "uxbear",
+            "text": "Everything happens without any input from your side. This is what anticipatory design is all about."
+        }, {
+            "author": "uxbear",
+            "text": "But what when it backfires?"
+        }],
+        "choices": [{
+            "path": "330/",
+            "text": "\ud83d\ude31\ud83d\ude31\ud83d\ude31",
+            "write": false
+        }, {
+            "path": "17",
+            "text": "Baahh\u2026 What else?",
+            "write": false
+        }]
+    }, {
+        "path": "330/",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Jo\u00ebl van Bodegraven, digital experience designer at HyperIsland writes about the potential risks of anticipatory design."
+        }, {
+            "author": "uxbear",
+            "text": "He argues that it is in fact a trade-off:\u00a0The more automation we accept, the less human we become.\u00a0"
+        }, {
+            "author": "uxbear",
+            "text": "We\u2019re risking to end up in one big filter bubble."
+        }, {
+            "author": "uxbear",
+            "text": "One day we might suddenly stop evolving as we become victims of our fully automated selves \ud83d\ude2c"
+        }, {
+            "author": "uxbear",
+            "text": "Another question that obviously comes up is privacy here\u2026"
+        }],
+        "choices": [{
+            "path": "330//privacy",
+            "text": "Privacy?",
+            "write": false
+        }, {
+            "path": "17",
+            "text": "Next",
+            "write": false
+        }]
+    }, {
+        "path": "330//privacy",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Anticipatory design relies on access to all your data. The more data it has, the better it gets."
+        }, {
+            "author": "uxbear",
+            "text": "But when are we giving up our own privacy for design?"
+        }, {
+            "author": "uxbear",
+            "text": "Want to share your thoughts on that topic?"
+        }],
+        "choices": [{
+            "path": "330//privacy/yep",
+            "text": "Yep",
+            "write": false
+        }, {
+            "path": "17",
+            "text": "Nope, move on",
+            "write": false
+        }]
+    }, {
+        "path": "330//privacy/yep",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Cool, how do you feel about privacy and anticipatory design?"
+        }, {
+            "author": "uxbear",
+            "text": "Ready to grant bots access to all your data? \ud83e\udd17\ud83e\udd17\ud83e\udd17"
+        }],
+        "choices": [{
+            "path": "330//privacy/yep/thoughts",
+            "text": "thoughts",
+            "write": true
+        }]
+    }, {
+        "path": "330//privacy/yep/thoughts",
+        "messages": [{
+            "author": "uxbear",
+            "text": "I see your point \ud83d\udc4d"
+        }, {
+            "author": "uxbear",
+            "text": "I think it\u2019s fair to say that privacy is a delicate topic when it comes to anticipatory techniques."
+        }, {
+            "author": "uxbear",
+            "text": "This is well worth your time, even though it\u2019s not fully automated yet:"
+        }, {
+            "author": "uxbear",
+            "type": "link",
+            "href": "https://uxdesign.cc/the-power-and-risks-of-anticipatory-design-14ee45efa8b0#.wwbes2mq1",
+            "src": "http://uxchat.me/wp-content/uploads/1-sbSJH6h-QKDugeY-Js-kYw.png",
+            "title": "The power and risks of anticipatory design \u2013 Medium.com"
+        }],
+        "choices": [{
+            "path": "17",
+            "text": "Cool, anything else?",
+            "write": false
+        }]
+    }, {
+        "path": "17",
+        "messages": [{
+            "author": "uxbear",
+            "text": "By the way, before I forget\u2026"
+        }, {
+            "author": "uxbear",
+            "text": "what should I call you?"
+        }],
+        "choices": [{
+            "path": "17/name-memory",
+            "text": "name-memory",
+            "write": true
+        }]
+    }, {
+        "path": "17/name-memory",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Cool. I\u2019ll remember that.\u00a0"
+        }, {
+            "author": "uxbear",
+            "text": "I feel like that\u2019s the start of a wonderful friendship.\u00a0\ud83e\udd17"
+        }],
+        "choices": [{
+            "path": "17/name-memory/no-stop",
+            "text": "No! Stop!",
+            "write": false
+        }, {
+            "path": "327",
+            "text": "\u2764\ufe0f\u00a0What else?",
+            "write": false
+        }]
+    }, {
+        "path": "17/name-memory/no-stop",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Ok relax. I won\u2019t call you this way.\u00a0\ud83d\ude48"
+        }, {
+            "author": "uxbear",
+            "text": "I might ask you again though\u00a0\ud83d\ude43"
+        }],
+        "choices": [{
+            "path": "327",
+            "text": "Ok... What else?",
+            "write": false
+        }]
+    }, {
+        "path": "327",
+        "messages": [{
+            "author": "uxbear",
+            "text": "It's the week of the new iPhone \ud83d\udcf1"
+        }, {
+            "author": "uxbear",
+            "text": "But there is one huge design flaw Apple\u2019s not gonna fix...."
+        }, {
+            "author": "uxbear",
+            "text": "Curious about what and why? \ud83e\udd14"
+        }],
+        "choices": [{
+            "path": "327/yes-shoot",
+            "text": "Yes, shoot!",
+            "write": false
+        }, {
+            "path": "321",
+            "text": "Nope",
+            "write": false
+        }]
+    }, {
+        "path": "327/yes-shoot",
+        "messages": [{
+            "author": "uxbear",
+            "text": "In its quest for beauty, Apple is championing marketing while\u00a0ignoring the long-term experience customers have with the iPhone \ud83d\ude48"
+        }, {
+            "author": "uxbear",
+            "text": "25% of iPhones break in the exact same way:"
+        }, {
+            "author": "uxbear",
+            "text": "broken screens... \u00a0\ud83d\udca9"
+        }, {
+            "author": "uxbear",
+            "type": "link",
+            "href": "https://www.fastcodesign.com/3063238/why-wont-apple-fix-the-iphones-one-huge-design-flaw",
+            "src": "http://uxchat.me/wp-content/uploads/3063238-poster-p-1-why-wont-apple-fix-the-iphones-one-design-flaw.jpg",
+            "title": "Why Won't Apple Fix The iPhone's One Huge Design Flaw?"
+        }],
+        "choices": [{
+            "path": "321",
+            "text": "What else?",
+            "write": false
+        }]
+    }, {
+        "path": "321",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Design can affect the way we feel about products and interfaces\u2026"
+        }, {
+            "author": "uxbear",
+            "text": "Currently we often refer to it as empathy or UX design"
+        }, {
+            "author": "uxbear",
+            "text": "Jonas Downey, designer at Basecamp argues that these terms mean far too many things in different contexts and that we should just call it what it really is\u2026"
+        }, {
+            "author": "uxbear",
+            "text": "Designing with heart \u2764\ufe0f\u2764\ufe0f\u2764\ufe0f"
+        }, {
+            "author": "uxbear",
+            "type": "link",
+            "href": "https://m.signalvnoise.com/the-art-of-designing-with-heart-f5dc4df21697?ref=uxdesignweekly#.ghu3k9hll",
+            "src": "SeatJoyLogo_circled_72by72.png",
+            "title": "The Art of Designing With Heart\n"
+        }],
+        "choices": [{
+            "path": "321/",
+            "text": "\u2764\ufe0f\u2764\ufe0f\u2764\ufe0f",
+            "write": false
+        }, {
+            "path": "caughtup",
+            "text": "Erm\u2026 what else?",
+            "write": false
+        }]
+    }, {
+        "path": "321/",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Downey argues that the software you build isn\u2019t just UI, a few lines of code and a compilation of your best ideas\u2026"
+        }, {
+            "author": "uxbear",
+            "text": "It\u2019s your desire to help others. Your compassion, your feelings and your soul."
+        }, {
+            "author": "uxbear",
+            "text": "In short\u2026 Your software is YOU! \ud83d\udc40"
+        }, {
+            "author": "uxbear",
+            "text": "When you see things in this light though, you\u2019ll notice that a lot of software is dull and lifeless \ud83d\ude44"
+        }],
+        "choices": [{
+            "path": "321//why",
+            "text": "Why",
+            "write": false
+        }, {
+            "path": "caughtup",
+            "text": "What else?",
+            "write": false
+        }]
+    }, {
+        "path": "321//why",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Your bank\u2019s website or insurance app is probably as cold as ice."
+        }, {
+            "author": "uxbear",
+            "text": "It\u2019s not surprising, designers often take requirements and translate it to functional interfaces!"
+        }, {
+            "author": "uxbear",
+            "text": "Now imagine you\u2019d have an ATM that was actually nice. An ATM which is friendly, unobtrusive and efficient. Wouldn\u2019t that be much nicer?"
+        }, {
+            "author": "uxbear",
+            "text": "It\u2019s all about balance though. Make it too emotional and it can backfire quickly."
+        }, {
+            "author": "uxbear",
+            "text": "\u201cGood software is friendly, casual, approachable\u200a\u2014\u200abut also serious, gracious, and respectful. Just like a pleasant real-life experience you\u2019d have at a local business.\u201c"
+        }, {
+            "author": "uxbear",
+            "text": "Do you design with heart and feel like sharing some of your work with me and others here?"
+        }],
+        "choices": [{
+            "path": "321//why/yes",
+            "text": "Yes",
+            "write": false
+        }, {
+            "path": "caughtup",
+            "text": "Nope, move on!",
+            "write": false
+        }]
+    }, {
+        "path": "321//why/yes",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Awesome! \ud83c\udf89 Can\u2019t wait to see this!! Take those fishes for contributing! Well deserved! \ud83d\udc1f\ud83d\udc1f\ud83d\udc1f"
+        }, {
+            "author": "uxbear",
+            "text": "So what exactly makes your design stand out? Share the URL and please remember to include your twitter handle, I might ping you and share it with others \ud83d\udc40"
+        }],
+        "choices": [{
+            "path": "321//why/yes/thoughts",
+            "text": "thoughts",
+            "write": true
+        }]
+    }, {
+        "path": "321//why/yes/thoughts",
+        "messages": [{
+            "author": "uxbear",
+            "text": "Awesome! I\u2019ll check it out when I\u2019m back home."
+        }, {
+            "author": "uxbear",
+            "text": "Let you know if I share it with other of my friends here on uxchat! \ud83d\ude4c"
+        }],
+        "choices": [{
+            "path": "caughtup",
+            "text": "Thanks, what else?",
+            "write": false
+        }]
+    }, {
+        "messages": [{
+            "text": "Wraaaa groar! (Polar bearish for how\u2019s the fish?).",
+            "author": "uxbear"
+        }, {
+            "text": "Congrats! You\u2019re still caught up! \ud83d\ude4c",
+            "author": "uxbear"
+        }, {
+            "text": "Got a link or any design news others might find interesting? \ud83e\udd17",
+            "author": "uxbear"
+        }],
+        "path": "empty",
+        "choices": [{
+            "path": "submitArticle",
+            "text": "Yes!",
+            "write": false
+        }, {
+            "path": "bye",
+            "text": "Nope, thanks!",
+            "write": false
+        }]
+    }, {
+        "messages": [{
+            "text": "Can\u2019t wait to hear your thoughts \ud83d\ude0a",
+            "author": "uxbear"
+        }],
+        "path": "submitArticle",
+        "choices": [{
+            "path": "articleSubmitted",
+            "text": "",
+            "write": true
+        }]
+    }, {
+        "messages": [{
+            "text": "I hope others will like this just as much as you do! Thanks! :)",
+            "author": "uxbear"
+        }, {
+            "text": "Everything must come to an end. For now. See you soon ;)",
+            "author": "uxbear"
+        }],
+        "path": "articleSubmitted"
+    }, {
+        "messages": [{
+            "text": "All right! Make sure you come back again. Was great talking to you!",
+            "author": "uxbear"
+        }],
+        "path": "bye"
+    }, {
+        "messages": [{
+            "text": "Groaaaaaaaar! Getting tired. You should go celebrate now! \ud83c\udf8a \ud83c\udf89 We\u2019ll talk tomorrow! \ud83d\ude43",
+            "author": "uxbear"
+        }, {
+            "text": "<img src=\"https://media.giphy.com/media/d2Z4rTi11c9LRita/giphy.gif\">",
+            "author": "uxbear"
+        }, {
+            "text": "Got a link or any design news others might find interesting? \ud83e\udd17",
+            "author": "uxbear"
+        }],
+        "path": "caughtup",
+        "choices": [{
+            "path": "submitArticle",
+            "text": "Yes!",
+            "write": false
+        }, {
+            "path": "bye",
+            "text": "Nope, thanks!",
+            "write": false
+        }]
+    }];
+    var a = [{
+        "id": "uxbear",
+        "name": "SeatJoy",
+        "src": "SeatJoyLogo_circled_72by72.png",
+        "url": "http://twitter.com/uxdesigncc"
+    }, {
+        "id": "default",
+        "name": "SeatJoy",
+        "src": "SeatJoyLogo_circled_72by72.png",
+        "url": "http://twitter.com/uxdesigncc"
+    },  {
+        id: "danariely",
+        name: "Dan Ariely",
+        url: "http://danariely.com",
+        src: "http://1.gravatar.com/avatar/a59e2016d42bc82d46f935d125b63c74?s=96&d=mm&r=g"
+    }, {
+        id: "dannessler",
+        name: "Dan Nessler",
+        url: "http://www.dannessler.com/",
+        src: "http://0.gravatar.com/avatar/f0e3885e4199d6f08c6bb3b2a27c7fb0?s=96&d=mm&r=g"
+    }, {
+        id: "denisejacobs",
+        name: "Denise Jacobs",
+        url: "http://www.denisejacobs.com",
+        src: "http://0.gravatar.com/avatar/ff23902c7650259667de5a16a9cb0f09?s=96&d=mm&r=g"
+    }, {
+        id: "evalottchen",
+        name: "Eva-Lotta Lamm",
+        url: "https://twitter.com/evalottchen",
+        src: "http://0.gravatar.com/avatar/363694304ccb13c7ef30c2adc5f7ce37?s=96&d=mm&r=g"
+    }, {
+        id: "fabriciot",
+        name: "Fabricio Teixeira",
+        url: "https://twitter.com/fabriciot",
+        src: "http://1.gravatar.com/avatar/1d018b905cab5db2e92e845e5f224fdf?s=96&d=mm&r=g"
+    }, {
+        id: "jessican",
+        name: "Jessica Müller",
+        url: "https://twitter.com/jessicamzh",
+        src: "http://1.gravatar.com/avatar/78d2440af78ee2270e9941a36aea44f0?s=96&d=mm&r=g"
+    }, {
+        id: "kchristen",
+        name: "Karin Christen",
+        url: "https://twitter.com/karinchristen",
+        src: "http://1.gravatar.com/avatar/4d4996b003601a513d8b0a1085c6b41c?s=96&d=mm&r=g"
+    }, {
+        id: "lukew",
+        name: "Luke Wroblewski",
+        url: "http://www.lukew.com/",
+        src: "http://2.gravatar.com/avatar/beed373a9ec70d5fcc4f1170660a4a5f?s=96&d=mm&r=g"
+    }, {
+        id: "monteiro",
+        name: "Mike Monteiro",
+        url: "http://monteiro.com",
+        src: "http://0.gravatar.com/avatar/65d7b340bfefff9fb8d84061b2be226a?s=96&d=mm&r=g"
+    }, {
+        id: "olo",
+        name: "Oliver Reichenstein",
+        url: "https://twitter.com/@iA",
+        src: "http://0.gravatar.com/avatar/90e037f9fa16ccdc797e22bcb06fbf7d?s=96&d=mm&r=g"
+    }, {
+        id: "smashingmagazine",
+        name: "Vitaly Friedman",
+        url: "https://twitter.com/smashingmag",
+        src: "http://2.gravatar.com/avatar/e8977f4397be6ca8dcf6f2d6d8aa45f1?s=96&d=mm&r=g"
+    }, ]
+</script><script src="dist/chat.js" ></script>
+<script src="dist/chat-bubble.js" ></script>
+<script src="dist/u.js" ></script>
+<script>
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  // ga('create', 'UA-42460075-2', 'auto');
+  // ga('send', 'pageview');
 </script>
+</div>
 </body>
+
 </html>
