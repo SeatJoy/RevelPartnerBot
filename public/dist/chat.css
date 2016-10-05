@@ -1,0 +1,259 @@
+.cui__audio {
+    margin: -6px -12px;
+    padding: 6px 12px;
+    overflow: hidden
+}
+.cui__audio__progress {
+    transition: width .15s linear;
+    position: absolute;
+    background: #ccc;
+    bottom: -9px;
+    border: none;
+    width: 0%;
+    height: 2px;
+    left: 0
+}
+.cui__audio__btn {
+    margin-right: 6px;
+    font-family: inherit;
+    position: relative;
+    font-size: inherit;
+    padding-left: 24px;
+    background: none;
+    cursor: pointer;
+    border: none
+}
+.cui__audio__btn svg {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 4px
+}
+.cui__audio__btn svg path {
+    fill: #fff
+}
+.cui__audio__btn:before {
+    transition: background .15s ease-in-out;
+    background: rgba(0, 0, 0, 0.24);
+    border-radius: 100%;
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 4px
+}
+.cui__audio__btn:hover:before {
+    background: rgba(0, 0, 0, 0.54)
+}
+.cui__card {
+    text-decoration: none;
+    border-radius: 3px;
+    color: rgba(0, 0, 0, 0.54);
+    position: relative;
+    line-height: 1.5em;
+    font-size: 0.75em;
+    background: none;
+    display: block
+}
+.cui__card span {
+    display: block
+}
+.cui__card img {
+    display: block;
+    margin: 4px 0px;
+    max-width: 100%
+}
+.cui__embed {
+    transition: none;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    max-width: 80vw;
+    width: 720px;
+    height: 0
+}
+.cui__embed:before {
+    content: ''
+}
+.cui__embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+@keyframes font-fade {
+    50% {
+        color: transparent
+    }
+    100% {
+        color: "inherit"
+    }
+}
+@keyframes loading {
+    0% {
+        left: 12px
+    }
+    33.3331% {
+        left: 12px
+    }
+    33.3333% {
+        left: 17px
+    }
+    66.6661% {
+        left: 17px
+    }
+    66.6666% {
+        left: 21px
+    }
+    99.99% {
+        left: 21px
+    }
+    100% {
+        left: 12px
+    }
+}
+@keyframes item-fade {
+    0% {
+        opacity: 0
+    }
+    80% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+.cui {
+    position: relative;
+    margin: 0
+}
+.cui,
+.cui * {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    outline: none
+}
+.cui a {
+    text-decoration: none
+}
+.cui .cui__list__item--new {
+    position: relative
+}
+.cui .cui__list__item--new .cui__avatar {
+    transform: scale(1);
+    opacity: 1
+}
+.cui .cui__list__item--new .cui__list__item__author {
+    opacity: 1
+}
+.cui .cui__list__item--new .cui__bubble {
+    animation: item-fade 0.2s ease-in-out
+}
+.cui--avatarEnabled .cui__bubble {
+    margin: 0 0 1em 28px
+}
+.cui__avatar {
+    transition: all .35s ease-in-out;
+    transform: scale(0.8);
+    border-radius: 100%;
+    position: absolute;
+    height: 34px;
+    z-index: 99;
+    width: 34px;
+    opacity: 0;
+    top: 42px;
+    left: 0
+}
+.cui .cui__list__item__author {
+    transition: all .55s ease-in-out 1.545s;
+    margin: 16px 0 6px 28px;
+    padding-left: 10px;
+    font-size: .85em;
+    display: block;
+    color: #888;
+    opacity: 0
+}
+.cui .cui__list__item__author:empty {
+    display: none
+}
+.cui__bubble {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    transform: translate3d(-96px, 0, 0);
+    background: #fff;
+    transition: transform 0.85s cubic-bezier(0.68, 0.01, 0.245, 1.13) 0.35s, color 0.3s ease-in-out 0.25s, min-width 0.35s ease-in-out, min-height 0.35s ease-in-out;
+    display: inline-block;
+    line-height: 1.45em;
+    border-radius: 3px;
+    margin: 0 0 1em 0;
+    text-align: left;
+    position: relative;
+    padding: 6px 12px;
+    font-size: 19px;
+    border: none;
+    max-width: 90%;
+    min-width: 44px;
+    min-height: 12px
+}
+.cui__bubble--response {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.5s cubic-bezier(0.68, 0.01, 0.245, 1.13) 0s;
+    background: #008ABC;
+    float: right;
+    color: #fff
+}
+.cui__bubble--fade,
+.cui__bubble--fade:before {
+    animation: font-fade .2s ease-in-out
+}
+.cui__bubble--slideIn {
+    transform: translate3d(0, 0, 0)
+}
+.cui__bubble span {
+    display: block
+}
+.cui__bubble--typing>* {
+    display: none !important
+}
+.cui__bubble--typing:before {
+    content: '...';
+    color: #000
+}
+.cui__bubble--typing:after {
+    animation: loading 1s infinite;
+    color: rgba(255, 255, 255, 0.5);
+    content: '.';
+    position: absolute;
+    left: 0px
+}
+.cui__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 148px 0
+}
+.cui__list__item {
+    padding: 0 1em;
+    margin: 0;
+    overflow: hidden
+}
+.cui__responses {
+    text-align: center;
+    position: fixed;
+    padding: 6px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0
+}
+.cui__responses .cui__bubble {
+    margin: 12px 6px;
+    cursor: pointer;
+    float: none
+}
+.cui__answers__placeholder:before {
+    content: 'Type and hit RETURN...';
+    display: inline-block;
+    opacity: 0.5
+}
