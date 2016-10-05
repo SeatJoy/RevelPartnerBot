@@ -36,7 +36,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                     n = t.bottom - window.innerHeight,
                     s = document.querySelector(this.config.scrollNode),
                     a = function i() {
-                        n > 0 && (s.scrollTop = s.scrollTop + 8, n -= 8, window.requestAnimationFrame(i))
+                        n > 0 && (s.scrollTop = s.scrollTop + 20, n -= 8, window.requestAnimationFrame(i))
                     };
                 a()
             }
@@ -77,7 +77,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
             key: "wipeResponses",
             value: function(e) {
                 [].slice.call(this.responses.children).forEach(function(t) {
-                    return t !== e ? t.style.transform = "translate3d(0, 100px, 0)" : void 0
+                    return t !== e ? t.style.transform = "translate3d(0, 150px, 0)" : void 0
                 })
             }
         }, {

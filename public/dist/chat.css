@@ -186,7 +186,7 @@
     transition: transform 0.85s cubic-bezier(0.68, 0.01, 0.245, 1.13) 0.35s, color 0.3s ease-in-out 0.25s, min-width 0.35s ease-in-out, min-height 0.35s ease-in-out;
     display: inline-block;
     line-height: 1.45em;
-    border-radius: 3px;
+    border-radius: 10px;
     margin: 0 0 1em 0;
     text-align: left;
     position: relative;
@@ -200,7 +200,7 @@
 .cui__bubble--response {
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s cubic-bezier(0.68, 0.01, 0.245, 1.13) 0s;
-    background: #008ABC;
+    background: #FF634D;
     float: right;
     color: #fff
 }
@@ -222,7 +222,7 @@
     color: #000
 }
 .cui__bubble--typing:after {
-    animation: loading 1s infinite;
+    animation: loading 0.3s infinite;
     color: rgba(255, 255, 255, 0.5);
     content: '.';
     position: absolute;
@@ -241,19 +241,19 @@
 .cui__responses {
     text-align: center;
     position: fixed;
-    padding: 6px;
+    padding: 2px;
     bottom: 0px;
     left: 0;
     right: 0;
     margin: 0
 }
 .cui__responses .cui__bubble {
-    margin: 12px 6px;
+    margin: 8px 3px;
     cursor: pointer;
     float: none
 }
 .cui__answers__placeholder:before {
-    content: 'Type and hit RETURN...';
+    content: 'Type and hit return..';
     display: inline-block;
     opacity: 0.5
 }
