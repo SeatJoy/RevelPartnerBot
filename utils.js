@@ -2,88 +2,158 @@
 
 let rp = require('request-promise');
 const config = require("./config.js");
+const urls = require("./urls.js")
 
-// OPTIONS
+// Revel Summary Endpoint Options
 
-function inviteUserOptions (opts) {
+function getDailySummary(opts) {
   return {
-    method: 'POST',
-    uri: 'https://slack.com/api/groups.invite',
-    qs: {
-      token: config.token,
-      channel: opts.channel,
-      user: opts.user
+    method: "GET",
+    uri: urls.revel_sales_summary,
+    headers: {
+      "API-AUTHENTICATION": config.revelApiKeySecret, 
+    },
+    body: {
+      posstation: opts.pos,
+      employee: opts.employee,
+      show_unpaid: opts.show_unpaid,
+      show_irregular: opts.show_irregular,
+      range_from: opts.range_from,
+      range_to: opts.range_to,
+      establishment: opts.establishment,
+      format: "json"
     },
     json: true
   }
 }
 
-function createPrivateChannelOptions(name) {
-  return {
-    method: 'POST',
-    uri: 'https://slack.com/api/groups.create',
-    qs: {
-      token: config.token,
-      name: name
-    },
-    json: true
-  };
-}
-
-function retrieveOrdersOptions() {
+function getHourlySummary(opts) {
   return {
     method: "GET",
-    uri: "https://****.revelup.com/weborders/menu/?establishment=2",
+    uri: urls.revel.hourly_summary,
     headers: {
-      "API-AUTHENTICATION": config.apiKeySecret, 
-    }
+      "API-AUTHENTICATION": config.revelApiKeySecret, 
+    },
+    body: {
+      posstation: opts.pos,
+      employee: opts.employee,
+      show_unpaid: opts.show_unpaid,
+      show_irregular: opts.show_irregular,
+      range_from: opts.range_from,
+      range_to: opts.range_to,
+      establishment: opts.establishment,
+      format: "json"
+    },
+    json: true
+  }
+}
+
+function getInventorySummary(opts) {
+  return {
+    method: "GET",
+    uri: urls.revel.inventory_sumamry,
+    headers: {
+      "API-AUTHENTICATION": config.revelApiKeySecret, 
+    },
+    body: {
+      establishment: opts.establishment,
+      user: opts.user,
+      product_class: opts.product_class,
+      search_query: opts.search_query,
+      vendor: opts.vendor,
+      inactive: opts.inactive,
+      offset: opts.offset,
+      limit: opts.limit,
+      range_from: opts.range_from,
+      range_to: opts.range_to,
+    },
+    json: true
+  }
+}
+
+function getCurrentInventory(opts) {
+  return {
+    method: "GET",
+    uri: urls.revel.inventory_current,
+    headers: {
+      "API-AUTHENTICATION": config.revelApiKeySecret, 
+    },
+    body: {
+      establishment: opts.establishment,
+      track_in_inventory: true,
+      active: true,
+      format: "json"
+    },
+    json: true  
   };
 }
 
-function submitOrderOptions(data) {
+function getCurrentIngredients(opts) {
   return {
-    method: "POST",
-    uri: "https://****.revelup.com/specialresources/cart/submit/",
+    method: "GET",
+    uri: urls.revel.inventory_ingredients,
     headers: {
-      "API-AUTHENTICATION": config.apiKeySecret, 
+      "API-AUTHENTICATION": config.revelApiKeySecret, 
     },
     body: {
-      skin: "weborder",
-      establishmentId: 2,
-      items: [],
-      orderInfo: {},
-      paymentInfo: {}
+      establishment: opts.establishment,
+      track_in_inventory: true,
+      active: true,
+      format: "json"
     },
     json: true
   };
 }
 
-// RESTFUL FUNCTIONS
-function retrieveOrders() {
-  return rp(retrieveOrdersOptions());
+// Test Merchant Facebook endpoint
+
+function postMessageToFBFans(opts) {
+  return {
+    method: 'POST',
+    uri: urls.app.facebook_post,
+    body: {
+      entry: [{ 
+        messaging: [{
+          sender: {
+            id: opts.channel
+          },
+          timestamp: date.getTime(),
+          message: {
+            text: opts.text,
+            attachments: opts.attachments
+          },
+        }]
+      }]
+    },
+    json: true
+  }
 }
 
-function submitOrders(data) {
-  return rp(submitOrderOptions(data));
-}
+// Test Merchant Twitter endpoint
 
-function createPrivateChannel(name) {
-  return rp(createPrivateChannelOptions(name))
-}
-
-function inviteUser(opts) {
-  return rp(inviteUserOptions(opts));
-}
-
-// HELPER FUNCTIONS
-function parserData(data) {
-  return {};
+function postMessageToTwitFans(opts) {
+  return {
+    method: "POST",
+    uri: urls.app.twitter_post,
+    headers: {
+      "API-AUTHENTICATION": config.revelApiKeySecret, 
+    },
+    body: {
+      establishment: opts.establishment,
+      track_in_inventory: true,
+      active: true,
+      format: "json"
+    },
+    json: true
+  };
 }
 
 module.exports = { 
-  retrieveOrders: retrieveOrders,
-  submitOrders: submitOrders,
-  parserData: parserData,
-  createPrivateChannel: createPrivateChannel,
-  inviteUser: inviteUser,
+  getHourlySummary: getHourlySummary,
+  getDailySummary: getDailySummary,
+  getInventorySummary: getInventorySummary,
+  getCurrentInventory: getCurrentInventory,
+  getCurrentIngredients: getCurrentIngredients,
+  postMessageToFBFans: postMessageToFBFans,
+  postMessageToTwitFans: postMessageToTwitFans
 }
