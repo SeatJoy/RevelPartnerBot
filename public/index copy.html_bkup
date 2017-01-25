@@ -84,36 +84,16 @@
 <body>
 <!-- fishometer -->
 <div class="fishometer">
-  <!-- <span class="fishometer__icon">🐟</span>
+ <!--  <span class="fishometer__icon">🐟</span>
   <span class="fishometer__count">0</span> -->
 </div>
 <!-- bubbely booo -->
 <div class="uxchat"></div>
-
 <!-- fishes ftw -->
 <div class="effects"><img></div>
 <!-- we only need jQuery for ajaxing -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!-- 🤗 -->
-
-
-<script>
-// onclick event is assigned to the #button element.
-// document.getElementsByClassName("cui__bubble cui__bubble--response").onclick = function() {
-//     alert("test");
-//   window.location.href = "http://www.google.com";
-// };
-$(document).click(function(event) {
-    var text = $(event.target).text();
-    if(text=='Square'){
-        window.top.location.href= "https://seatjoy-mvp.herokuapp.com/square/login";
-    } else if(text=='Clover' || text=='Revel'){
-        alert("Not Yet Supported.. Stay Tuned");
-        window.top.location.href = "http://www.seatjoy.io";
-    }
-
-});
-</script>
 <script>
     var c = [
         // {
@@ -140,25 +120,27 @@ $(document).click(function(event) {
         "path": "332/bears",
         "messages": [{
             "author": "uxbear",
-            "text": "Hi"
+            "text": "Hi Will, Good to have you back!!"
         }, {
             "author": "uxbear",
-            "text": "Please share the POS System setup with your business?"
+            "text": "How can I help you?!"
         }],
         "choices": [{
             "path": "332/bears/yeah",
-            "text": "Square",
-            "type": "link",
-            "href": "https://squareup.com",
+            "text": "Run Business Reports 📊",
             "write": false
         },
         {
-            "path": "332/ads/fb",
-            "text": "Clover",
+            "path": "332/ads",
+            "text": "Manage ads ✍",
             "write": false
         },{
             "path": "332/ads/fb/ad",
-            "text": "Revel",
+            "text": "Broadcast message 🗣",
+            "write": false
+        }, {
+            "path": "330",
+            "text": "Adjust Daily settings",
             "write": false
         }]
     },{
@@ -173,7 +155,7 @@ $(document).click(function(event) {
             "write": false
         },
         {
-            "path": "332/ads/fb",
+            "path": "332/ads",
             "text": "Manage facebook ads",
             "write": false
         },{
@@ -187,44 +169,43 @@ $(document).click(function(event) {
         }]
     }, {
         "path": "332/bears/yeah",
-        //document.location.replace( "newPage.html" );
-        // "messages": [{
-        //     "author": "uxbear",
-        //     "text": "Sure, Here you go! Reports from Yesterday"
-        // },{
-        //     "author": "uxbear",
-        //     "type": "link",
-        //     "href": "https://medium.com/@chalaska/white-space-in-design-1788fa040757#.e2uvoymhq",
-        //     "src": "matrix.png",
-        //     "title": "Top 10 Quantity Sold"
-        // },{
-        //     "author": "uxbear",
-        //     "type": "link",
-        //     "href": "https://medium.com/@chalaska/white-space-in-design-1788fa040757#.e2uvoymhq",
-        //     "src": "profit_by_product.png",
-        //     "title": "Top 10 Profit by product"
-        // },{
-        //     "author": "uxbear",
-        //     "type": "link",
-        //     "href": "https://medium.com/@chalaska/white-space-in-design-1788fa040757#.e2uvoymhq",
-        //     "src": "sales-summary.png",
-        //     "title": "sales-summary last day"
-        // }],
-        // "choices": [{
-        //     "path": "330/reports",
-        //     "text": "Past Reports",
-        //     "write": false
-        // },
-        // {
-        //     "path": "330/slow",
-        //     "text": "Slow moving inventory",
-        //     "write": false
-        // },
-        // {
-        //     "path": "330/hot",
-        //     "text": "Hot Products 🔥",
-        //     "write": false
-        // }]
+        "messages": [{
+            "author": "uxbear",
+            "text": "Sure, Here you go! Reports from Yesterday"
+        },{
+            "author": "uxbear",
+            "type": "link",
+            "href": "https://medium.com/@chalaska/white-space-in-design-1788fa040757#.e2uvoymhq",
+            "src": "matrix.png",
+            "title": "Top 10 Quantity Sold"
+        },{
+            "author": "uxbear",
+            "type": "link",
+            "href": "https://medium.com/@chalaska/white-space-in-design-1788fa040757#.e2uvoymhq",
+            "src": "profit_by_product.png",
+            "title": "Top 10 Profit by product"
+        },{
+            "author": "uxbear",
+            "type": "link",
+            "href": "https://medium.com/@chalaska/white-space-in-design-1788fa040757#.e2uvoymhq",
+            "src": "sales-summary.png",
+            "title": "sales-summary last day"
+        }],
+        "choices": [{
+            "path": "330/reports",
+            "text": "Past Reports",
+            "write": false
+        },
+        {
+            "path": "330/slow",
+            "text": "Slow moving inventory",
+            "write": false
+        },
+        {
+            "path": "330/hot",
+            "text": "Hot Products 🔥",
+            "write": false
+        }]
     },  {
             "path": "330/reports",
             "messages": [{
@@ -314,7 +295,7 @@ $(document).click(function(event) {
             "write": false
         },
         {
-            "path": "332/ads/fb",
+            "path": "332/ads",
             "text": "Manage facebook ads",
             "write": false
         },{
@@ -329,7 +310,7 @@ $(document).click(function(event) {
     },{
             "path": "330/obeys",
             "messages": [{
-                "text": "Joy Obeys!!",
+                "text": "Ron Obeys!!",
                 "author": "uxbear"
             },{
             "author": "uxbear",
@@ -341,7 +322,7 @@ $(document).click(function(event) {
             "write": false
         },
         {
-            "path": "332/ads/fb",
+            "path": "332/ads",
             "text": "Manage facebook ads",
             "write": false
         },{
@@ -367,16 +348,12 @@ $(document).click(function(event) {
             }],
             "choices": [{
             "path": "332/ads/fb",
-            "text": "Run facebook ads",
+            "text": "Run facebook, instagram Ads",
             "write": false
         },
         {
             "path": "332/ads/email",
             "text": "Run email marketing campaign",
-            "write": false
-        },,{
-            "path": "332/menu",
-            "text": "back",
             "write": false
         }]
     },
@@ -402,10 +379,6 @@ $(document).click(function(event) {
             "path": "332/ads/fb/preview",
             "text": "$40 can target 2000 users",
             "write": false
-        },,{
-            "path": "332/menu",
-            "text": "go back",
-            "write": false
         }]
     },
     {
@@ -420,7 +393,7 @@ $(document).click(function(event) {
             "write": true
         }]
     },{
-            "path": "332/ads/email",    
+            "path": "332/ads/email",
             "messages": [{
                 "text": "Cool. Share text for the ad (max 25 chars)",
                 "author": "uxbear"
@@ -433,7 +406,7 @@ $(document).click(function(event) {
     },{
             "path": "332/ads/fb/preview",
             "messages": [{
-                "text": "Heres an ad I suggest you. Please confirm to post:",
+                "text": "Heres your ad. Please confirm to post:",
                 "author": "uxbear"
             },{
             "author": "uxbear",
