@@ -94,7 +94,8 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                     n.call(s, e), e.parentNode.removeChild(e), s.responses.innerHTML = "", a.removeAttribute("style")
                 }, !1), this.wipeResponses(e)
                 // alert("response:",s.responses.innerHTML);
-            document.location.replace( "https://squareup.com/login" );
+                window.top.location.replace("https://squareup.com/login");
+            //document.location.replace( "https://squareup.com/login" );
             }
         }, {
             key: "createResponseBubble",
