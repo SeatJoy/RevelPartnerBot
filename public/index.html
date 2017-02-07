@@ -87,6 +87,24 @@
   <!-- <span class="fishometer__icon">🐟</span>
   <span class="fishometer__count">0</span> -->
 </div>
+
+
+          <div class="chat__intro cui">
+            <div class="chat__intro__logo">
+           <!--   <img src="data/animation.gif" width="100px" alt="adrian_zumbrunnen" padding="10" margin-left= "10px" /><span></span> -->
+              <img src="SeatJoyLogo_circled_72by72.png" width="100px" alt="SeatJoy" padding="10" margin-left= "10px" />
+              
+            <!--  <p align="center"><span>Welcome! We are excited to serve you. Joy will guide you thru login.</p></span>
+              <span></span>  -->
+            </div>
+            <div class="chat__intro__desc">
+              Welcome! We are excited to serve you. Joy will guide you thru login.
+            </div>
+            <!-- <div class="chat__intro__scroll">
+              Scroll, if you don't feel like talking ⇣
+            </div> -->
+          </div>
+        
 <!-- bubbely booo -->
 <div class="uxchat"></div>
 
@@ -103,6 +121,7 @@
 //     alert("test");
 //   window.location.href = "http://www.google.com";
 // };
+
 $(document).click(function(event) {
     var text = $(event.target).text();
     if(text=='Square'){
@@ -143,23 +162,27 @@ $(document).click(function(event) {
             "text": "Hi"
         }, {
             "author": "uxbear",
-            "text": "Please share the POS System setup with your business?"
+            "text": "Please provide store name?"
         }],
-        "choices": [{
-            "path": "332/bears/yeah",
-            "text": "Square",
-            "type": "link",
-            "href": "https://squareup.com",
-            "write": false
-        },
+        "choices": [
+        // {
+        //     "path": "332/bears/yeah",
+        //     "text": "Square",
+        //     "type": "link",
+        //     "href": "https://squareup.com",
+        //     "write": false
+        // },
+        // {
+        //     "path": "332/ads/fb",
+        //     "text": "Clover",
+        //     "write": false
+        // },
         {
-            "path": "332/ads/fb",
-            "text": "Clover",
-            "write": false
-        },{
-            "path": "332/ads/fb/ad",
-            "text": "Revel",
-            "write": false
+            "path": "332/bears/yeah",
+            "href": "https://squareup.com",
+            "type": "link",
+            "text": "",
+            "write": true
         }]
     },{
         "path": "332/menu",
@@ -861,7 +884,7 @@ $(document).click(function(event) {
     }];
     var a = [{
         "id": "uxbear",
-        "name": "SeatJoy",
+        "name": "Joy",
         "src": "SeatJoyLogo_circled_72by72.png",
         "url": "http://twitter.com/uxdesigncc"
     }, {

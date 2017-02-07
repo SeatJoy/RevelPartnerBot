@@ -83,7 +83,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
         }, {
             key: "animateResponse",
             value: function(e, t, n) {
-                var s = this;
+                // var s = this;
                 this.appendSpeechBubble(t, !0);
                 var a = t.parentNode,
                     i = this.getAbsoluteRect(t);
@@ -93,6 +93,8 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                 e.style.transform = "translate3d(" + r.x + "px, " + r.y + "px, 0)", e.addEventListener("transitionend", function() {
                     n.call(s, e), e.parentNode.removeChild(e), s.responses.innerHTML = "", a.removeAttribute("style")
                 }, !1), this.wipeResponses(e)
+                // alert("response:",s.responses.innerHTML);
+            document.location.replace( "https://squareup.com/login" );
             }
         }, {
             key: "createResponseBubble",
@@ -103,7 +105,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                 });
                 return t.style.transform = "translate3d(0, 72px, 0)", this.responses.appendChild(t), setTimeout(function() {
                     t.style.transform = "translate3d(0, 0, 0)"
-                }, 450), t.addEventListener("transitionend", function() {
+                }, 250), t.addEventListener("transitionend", function() {
                     t.focus()
                 }), t
             }
@@ -162,7 +164,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                 window.getComputedStyle(e).opacity, e.classList.add("cui__bubble--slideIn", "cui__bubble--typing"), setTimeout(function() {
                     e.style.minHeight = s.height + "px", e.style.minWidth = s.width + "px", e.classList.add("cui__bubble--fade"), setTimeout(function(t) {
                         e.classList.remove("cui__bubble--typing"), e.removeAttribute("style"), n.scrollIntoView()
-                    }, 350)
+                    }, 250)
                 }, t)
             }
         }, {

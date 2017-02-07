@@ -1,3 +1,241 @@
+/******************
+- chat block
+******************/
+
+.chat{
+  width: 100vw;
+  max-width: 100%;
+  margin: 0 !important;
+}
+  .chat__overflow {
+    background: #fafafa;
+    position: relative;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 72px;
+  }
+
+  .chat__intro__scroll{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    opacity: 0.4;
+    bottom: 12px;
+  }
+  .chat__intro__desc {
+    padding-bottom: 24px;
+    text-align: center;
+    em {
+      opacity: 0.5;
+    }
+  }
+  .chat__intro__logo {
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+    margin: 24px auto 12px auto;
+    border-radius: 100%;
+    overflow: hidden;
+    background: #fff;
+    height: 72px;
+    width: 72px;
+  }
+  .chat__intro__header img {
+    max-width: 80%;
+    margin-top: 10px;
+    margin-left: 12px;
+  }
+
+.chat .cui {
+  min-height: calc(100vh - 80px);
+}
+
+/******************
+- CUI Styles
+******************/
+
+@keyframes font-fade {
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: "inherit";
+  }
+}
+
+.cui {
+  &, & * {
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  background: #fafafa;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin: 0 auto;
+  max-width: 768px;
+
+  /******************
+  - CUI Bubble
+  ******************/
+  &__bubble {
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+    transform: translate3d(-96px, 0, 0);
+    transition:
+      transform .75s cubic-bezier(0.680, 0.010, 0.245, 1.130) .3s,
+      color .3s ease-in-out .25s,
+      min-width .35s ease-in-out,
+      min-height .35s ease-in-out;
+    display: inline-block;
+    line-height: 1.45em;
+    border-radius: 3px;
+    margin: 0 0 1em 0;
+    text-align: left;
+    position: relative;
+    padding: 6px 12px;
+    background: #fff;
+    font-size: 19px;
+    border: none;
+    max-width: 90%;
+    min-width: 44px;
+    min-height: 12px;
+
+    &--response {
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.5s cubic-bezier(0.68, 0.01, 0.245, 1.13) 0s;
+      background: #009688;
+      float: right;
+      color: #fff;
+    }
+
+    &--fade {
+      animation: font-fade .6s ease-in-out;
+    }
+
+    &--slideIn {
+      transform: translate3d(0, 0, 0);
+    }
+
+    /**
+     * Typing animation
+     */
+    &--typing {
+      color: transparent;
+      max-height: calc(1em + 16px);
+      max-width: 44px;
+      white-space: none;
+
+      &:before{
+        content: '...';
+        color: #000;
+      }
+    }
+
+    &--embed {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+      width: 100%;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 148px 0;
+
+    &__item {
+      padding: 0 1em;
+      margin: 0; // must be same margin than bubble__item
+      overflow: hidden; // cleafix hack
+    }
+  }
+
+  &__responses {
+    position: absolute;
+    text-align: center;
+    padding: 6px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0;
+
+    .cui__bubble{
+      margin: 12px 6px;
+      cursor: pointer;
+      float: none;
+    }
+  }
+
+  &__answers__placeholder {
+    &:before {
+      content: 'Type and hit RETURN...';
+      display: inline-block;
+      opacity: 0.5;
+    }
+  }
+}
+
+
+/******************
+- Chat cards
+******************/
+
+.cardousel {
+  max-height: 220px;
+  overflow: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 4px -12px 0px -2px;
+
+  .card {
+    text-overflow: ellipsis;
+    border: 1px solid #eee;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 3px;
+    margin-right: 8px;
+    overflow: hidden;
+    padding: 6px;
+    width: 248px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .card img {
+    margin: 0px 0px 6px 0px;
+    border-radius: 2px;
+    object-fit: cover;
+    display: block;
+    height: 150px;
+  }
+}
+
+.card {
+  border-radius: 3px;
+  color: rgba(0,0,0,.54);
+  line-height: 1.5em;
+  font-size: 0.75em;
+  background: none;
+  display: block;
+
+  span {
+    display: block;
+  }
+  img {
+    display: block;
+    margin: 4px 0px;
+  }
+}
+
 .cui__audio {
     margin: -6px -12px;
     padding: 6px 12px;
