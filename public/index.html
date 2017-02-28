@@ -93,13 +93,13 @@
             <div class="chat__intro__logo">
               <!-- <img src="data/animation.gif" width="100px" alt="adrian_zumbrunnen" padding="10" margin-left= "10px" /><span></span> --> 
               <img src="SeatJoyLogo_circled_72by72.png" width="100px" alt="SeatJoy" padding="10" margin-left= "10px" />
-             <!--  
+              
              <p align="center"><span>Welcome! We are excited to serve you. Joy will guide you thru login.</p></span>
-              <span></span>   -->
+              <span></span>  
             </div>
-            <!-- <div class="chat__intro__desc">
+            <div class="chat__intro__desc">
               <em>Welcome! We are excited to serve you. Joy will guide you thru login.</em>
-            </div> -->
+            </div>
             <!-- <div class="chat__intro__scroll">
               Scroll, if you don't feel like talking ⇣
             </div> -->
@@ -125,7 +125,7 @@
 $(document).click(function(event) {
     var text = $(event.target).text();
     if(text=='Square'){
-        window.top.location.href= "https://seatjoy-mvp.herokuapp.com/square/login";
+        window.top.location.href= "https://seatjoy-mvp.herokuapp.com/login/square";
     } else if(text=='Clover' || text=='Revel'){
         alert("Not Yet Supported.. Stay Tuned");
         window.top.location.href = "http://www.seatjoy.io";
@@ -162,27 +162,28 @@ $(document).click(function(event) {
             "text": "Hi"
         }, {
             "author": "uxbear",
-            "text": "Please provide store name?"
+            "text": "Please provide your Point of Sale partner?"
         }],
         "choices": [
-        // {
-        //     "path": "332/bears/yeah",
-        //     "text": "Square",
-        //     "type": "link",
-        //     "href": "https://squareup.com",
-        //     "write": false
-        // },
-        // {
-        //     "path": "332/ads/fb",
-        //     "text": "Clover",
-        //     "write": false
-        // },
         {
             "path": "332/bears/yeah",
-            "href": "https://squareup.com",
+            "text": "Square",
             "type": "link",
-            "text": "",
-            "write": true
+            "href": "https://squareup.com",
+            "write": false
+        }, {
+            "path": "332/bears/yeah",
+            "text": "Clover",
+            "type": "link",
+            "href": "https://squareup.com",
+            "write": false
+        },
+         {
+            "path": "332/bears/yeah",
+            "text": "Revel",
+            "type": "link",
+            "href": "https://squareup.com",
+            "write": false
         }]
     },{
         "path": "332/menu",
